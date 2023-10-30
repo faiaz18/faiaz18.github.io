@@ -1,0 +1,479 @@
+*{ /*  Das Sternchen (*) ist ein sogenannter Universal-Selektor. Es selektiert alle HTML-Elemente auf der Webseite.*/
+    margin: 0; /* Diese Regel setzt den äußeren Abstand (Rand) aller HTML-Elemente auf 0. Das bedeutet, dass kein Abstand zwischen den Elementen und ihren Nachbarn existiert.*/
+    padding: 0; /* Diese Regel setzt den inneren Abstand (Polsterung) aller HTML-Elemente auf 0. Das bedeutet, dass der Inhalt eines Elements nicht von Polstern umgeben ist.*/
+    font-family: 'Poppins', sans-serif; /* Diese Regel definiert die Schriftart, die auf alle Texte in der Webseite angewendet wird. Zuerst versucht sie, die Schriftart "Poppins" zu verwenden. Falls "Poppins" nicht verfügbar ist, wird der Fallback "sans-serif" verwendet.*/
+    box-sizing: border-box; /* Diese Regel definiert das Box-Modell für alle HTML-Elemente. Der Wert "border-box" bedeutet, dass die Gesamtgröße eines Elements, einschließlich des Inhalts, der Polsterung und des Rahmens, berechnet wird. Dies stellt sicher, dass Änderungen am Inhalt oder der Polsterung nicht die Gesamtgröße des Elements beeinflussen.*/
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: black; /*Background color */
+    color: white; /* Textcolor */
+}
+
+#header{ /*Dies ist ein CSS-Selektor, der auf ein HTML-Element mit der ID "header" abzielt. Diese ID sollte im HTML-Code einem bestimmten Element zugewiesen sein, normalerweise einem <div> */
+    width: 100%; 
+    height: 100vh; /*Hier wird die Höhe des "header"-Elements auf 100% der Viewport-Höhe (vh) gesetzt */
+    background-image: url(images/Background.jpg);
+    background-size: cover; /* Mit dieser Eigenschaft wird das Hintergrundbild so skaliert, dass es den gesamten Hintergrund des "header"-Elements abdeckt, ohne das Bild zu verzerren. Es kann dazu führen, dass Teile des Bildes abgeschnitten werden */
+    background-position: center; 
+}
+
+.container{ /* Container class  with navigation in it*/
+    padding: 10px 10%; /* 10 px from top and buttom and 10% from right and left*/
+}
+
+nav{ /* nav element*/
+    display: flex; /* Mit dieser Regel wird das <nav>-Element in ein Flex-Container umgewandelt. Flexbox ist ein CSS-Layoutmodell, das verwendet wird, um Elemente in einer Zeile oder Spalte anzuordnen und die Ausrichtung und Verteilung von Inhalten zu steuern.*/
+    align-items: center; /* iese Regel wird auf den Flex-Container angewendet und zentriert die Elemente vertikal innerhalb des Containers. Das bedeutet, dass die Elemente im Navigationsmenü auf der vertikalen Achse zentriert werden, sodass sie in der Mitte des Containers positioniert sind.*/
+    justify-content: space-between; /*: Diese Regel wird ebenfalls auf den Flex-Container angewendet und bewirkt, dass die Elemente im Navigationsmenü gleichmäßig über die horizontale Achse verteilt werden. Dies bedeutet, dass der Platz zwischen den Elementen so aufgeteilt wird, dass sie den gesamten verfügbaren horizontalen Platz ausfüllen, wobei sie den äußeren Bereich des Containers auslassen. */
+    flex-wrap: wrap; /*Mit dieser Regel wird festgelegt, dass die Elemente im Flex-Container, wenn sie nicht mehr horizontal in den Container passen, in die nächste Zeile umgebrochen werden. Dies stellt sicher, dass das Navigationsmenü auf kleinen Bildschirmen oder bei begrenztem horizontalen Platz gut reagiert, indem es die Menüpunkte in eine neue Zeile umbricht. */
+}
+
+.logo{
+    width: 350px; /* Logo grösse*/
+}
+
+nav ul li{ /* Dies ist ein sogenannter CSS-Selektor, der auf die <li>-Elemente abzielt, die sich innerhalb einer <ul>-Liste befinden, die sich wiederum innerhalb des <nav>-Elements befindet*/
+    display: inline-block; /* Diese Regel ändert die Anzeige der <li>-Elemente von der Standardanzeige "block" in "inline-block". Dies bewirkt, dass die <li>-Elemente inline in derselben Zeile angezeigt werden, während sie dennoch einige blockartige Eigenschaften behalten. Mit "inline-block" können die Elemente horizontal neben- und untereinander angeordnet werden, ohne den gesamten verfügbaren horizontalen Platz einzunehmen. */
+    list-style: none; /*Diese Regel entfernt die Standardlistenpunkte (Aufzählungspunkte oder Nummerierungen) für die <li>-Elemente. */
+    margin: 10px 20px; /*Hier werden Außenabstände (Margin) für die <li>-Elemente festgelegt. Die Werte "10px" und "20px" definieren den oberen/unteren und linken/rechten Außenabstand (im Uhrzeigersinn) der Elemente. Dies bedeutet, dass zwischen den Elementen ein Abstand von 10 Pixel oben und unten sowie 20 Pixel links und rechts eingefügt wird. */
+}
+
+nav ul li a{ /*Dies ist ein CSS-Selektor, der auf die Hyperlinks (<a>) abzielt, die sich innerhalb der <li>-Elemente befinden, die wiederum in einer <ul>-Liste im <nav>-Bereich der Webseite platziert sind.*/
+    color: white;
+    text-decoration: none; /* Taking away the underlines*/
+    font-size: 28px;
+    position: relative; /* Diese Regel setzt die Positionseigenschaft der Hyperlinks auf "relative". Dies ermöglicht es, dass die Hyperlinks relativ zu ihrer normalen Position im Dokument verschoben oder angeordnet werden können. Dies ist nützlich, wenn Sie beispielsweise Pseudoelemente (wie ::before oder ::after) oder andere Elemente innerhalb der Links positionieren möchten.*/
+}
+
+nav ul li a::after{ /* Dies ist ein CSS-Selektor, der auf das Pseudoelement (::after) abzielt, das sich innerhalb der Hyperlinks (<a>) befindet, die sich in den Listenelementen (<li>) einer ungeordneten Liste (<ul>) im Navigationsbereich (<nav>) der Webseite befinden. Pseudoelemente werden verwendet, um zusätzliche Inhalte oder Gestaltungselemente in einem Element hinzuzufügen, ohne dass sie tatsächlich im HTML-Code vorhanden sind.*/
+    content: ''; /*Dieser Stil definiert den Inhalt des Pseudoelements. In diesem Fall ist der Inhalt leer (eine leere Zeichenkette ''), was bedeutet, dass das Pseudoelement keinen sichtbaren Text oder Inhalt enthält.*/
+    width: 0; /*Diese Regel setzt die Breite des Pseudoelements auf 0% der Breite des übergeordneten Hyperlinks (<a>). Das Pseudoelement wird somit über die gesamte Breite des Links gezogen.*/
+    height: 3px; /*Hier wird die Höhe des Pseudoelements auf 3 Pixel festgelegt. Dies definiert die Dicke eines horizontalen Balkens, der unterhalb des Hyperlinks angezeigt wird.*/
+    background: red;
+    position: absolute; /*Mit dieser Regel wird die Positionierung des Pseudoelements auf "absolut" festgelegt. Dies ermöglicht es, das Pseudoelement unabhängig von seinem normalen Fluss innerhalb des Dokuments zu positionieren.*/
+    left: 0; /*Hier wird die horizontale Position des Pseudoelements auf 0 festgelegt, was bewirkt, dass es am linken Rand des Hyperlinks startet.*/
+    bottom: -6px; /*Diese Regel legt die vertikale Position des Pseudoelements fest. Ein Wert von -6 Pixeln bedeutet, dass das Pseudoelement 6 Pixel über dem unteren Rand des Hyperlinks positioniert wird, wodurch der horizontale Balken unterhalb des Links erscheint.*/
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after{ /* Oben habe ich gesagt dass die Linie unter den navigationen o ist, wenn ich aber jetzt mit der maus auf sie komme */
+    width: 100%; /* gibt es einen balken darunter*/
+
+}
+
+.header-text{
+    margin-top: 20%; /*Diese Regel setzt den oberen Außenabstand (Margin) für Elemente mit der Klasse ".header-text" auf 20 Prozent der Höhe des übergeordneten Containers. Dies bewirkt, dass der Text oder das Element, dem diese Klasse zugewiesen ist, um 20 Prozent der Höhe des Containers nach unten verschoben wird. Dies kann dazu verwendet werden, den Abstand zwischen dem Element und anderen Inhalten oder dem oberen Rand des Containers anzupassen.*/
+    font-size: 30px; /* Hier wird die Schriftgröße für Text in Elementen mit der Klasse ".header-text" auf 30 Pixel festgelegt. Dies bestimmt die Größe des Textes in diesen Elementen.*/
+    color: black;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.header-text h1{
+    font-size: 60px;
+    margin-top: 20px;
+    
+}
+
+.header-text h1 span{
+    color:red;
+}
+
+/* ---------------------------------- about --------------------------------*/
+
+#about{
+    padding: 80px 0; /* Diese Regel legt den Innenabstand (Padding) des "about"-Elements fest. Der Innenabstand ist der Raum zwischen dem Inhalt des Elements und seinem äußeren Rand. Die Werte "80px 0" definieren den Padding für die obere und untere Seite des Elements und lassen die rechte und linke Seite auf 0.
+
+    80px: Dieser Wert gibt an, dass der obere und untere Padding-Raum 80 Pixel beträgt. Das Element wird also oben und unten jeweils 80 Pixel Innenabstand haben.
+    
+    0: Dieser Wert bedeutet, dass für die rechte und linke Seite des Elements kein Innenabstand festgelegt ist, was dazu führt, dass kein horizontaler Padding-Raum vorhanden ist.*/
+
+    color: white;
+}
+
+.row{ /* alles in nav schon erklärt*/
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{ 
+    flex-basis: 35%; /* Diese Regel legt die Basisgröße (die ursprüngliche Größe) der Elemente mit der Klasse .about-col-1 auf 35 Prozent des verfügbaren Raums fest. Die Einheit in diesem Fall ist Prozent (%).*/
+}
+
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px; /* making the corners round*/
+}
+
+.about-col-2{ /* Macht das about me rechs neben den bild ist */
+    flex-basis: 60% /* Diese Regel legt die Basisgröße (die ursprüngliche Größe) der Elemente mit der Klasse .about-col-1 auf 35 Prozent des verfügbaren Raums fest. Die Einheit in diesem Fall ist Prozent (%).*/
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600; /* Dicke normalerweise 400*/
+    color:white;
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px; /*Diese Anweisung legt den Außenabstand (Margin) des Elements mit der Klasse "tab-titles" fest. Die Werte "20px 0 40px" definieren den Außenabstand für das Element.
+
+    Der obere Margin beträgt 20 Pixel, was einen Abstand von 20 Pixeln oberhalb des Elements erzeugt.
+    Der untere Margin beträgt 40 Pixel, was einen Abstand von 40 Pixeln unterhalb des Elements erzeugt.
+    Der linke und rechte Margin ist nicht spezifiziert (der Wert ist "0"), was bedeutet, dass der Abstand auf der linken und rechten Seite des Elements unverändert bleibt. */
+}
+
+.tab-links{
+    margin-right: 50px; /* Diese Anweisung legt einen rechten Außenabstand (Margin) von 50 Pixeln für die Elemente mit der Klasse "tab-links" fest. Dies bewirkt, dass der Abstand zwischen den Elementen auf der rechten Seite 50 Pixel beträgt, was sie horizontal voneinander trennt.*/
+    font-size: 18px; 
+    font-weight: 500;
+    cursor:pointer; /* Hier wird der Mauszeiger-Cursor für die Elemente mit der Klasse "tab-links" auf "pointer" gesetzt. Dies ändert das Aussehen des Cursors, wenn der Mauszeiger über diese Elemente bewegt wird, um anzuzeigen, dass sie anklickbar sind, wie bei Links oder Schaltflächen.*/
+    position: relative; /* Diese Anweisung legt die Positionseigenschaft der Elemente mit der Klasse "tab-links" auf "relative" fest. Dies ermöglicht es, dass die Position dieser Elemente relativ zu ihrer normalen Position im Dokument verschoben oder angeordnet werden kann. */
+}
+
+.tab-links::after{ /* Dies ist ein CSS-Selektor, der auf das Pseudoelement ::after abzielt, das in Elementen mit der Klasse "tab-links" eingefügt wird. Pseudoelemente werden verwendet, um zusätzliche Inhalte oder Gestaltungselemente zu einem Element hinzuzufügen, ohne diese im HTML-Code selbst zu haben.*/
+    content: ''; /* Dieser Stil definiert den Inhalt des Pseudoelements. In diesem Fall ist der Inhalt leer, was bedeutet, dass das Pseudoelement keinen sichtbaren Text oder Inhalt enthält.*/
+    width: 0; /* Hier wird die Breite des Pseudoelements auf 0 gesetzt. Anfangs ist das Pseudoelement also nicht sichtbar.*/
+    height: 3px;
+    background: red;
+    position: absolute;
+    left: 0; /* Hier wird die horizontale Position des Pseudoelements auf 0 festgelegt, was bewirkt, dass die Unterstreichung am Anfang des Links positioniert wird.*/
+    bottom: -8px; /* Diese Regel legt die vertikale Position des Pseudoelements fest. Mit einem Wert von -8 Pixeln wird das Pseudoelement 8 Pixel über dem unteren Rand des Links positioniert, was die Unterstreichung unterhalb des Textes platziert.*/
+    transition: 0.5s; /* Diese Regel fügt eine Übergangseigenschaft hinzu, die bewirkt, dass Veränderungen an den Eigenschaften des Pseudoelements (insbesondere die Breite) innerhalb von 0,5 Sekunden sanft animiert werden.*/
+}
+.tab-links.active-link::after{ /* Dies ist ein weiterer CSS-Selektor, der auf das Pseudoelement ::after abzielt, das in Elementen mit der Klasse "tab-links" und "active-link" eingefügt wird. Dies bedeutet, dass die folgenden Regeln nur auf das Pseudoelement in aktivierten Links angewendet werden.*/
+    width: 50%; /* Diese Regel ändert die Breite des Pseudoelements auf 50 Prozent. Wenn der Link aktiv ist (z. B. ausgewählt oder angeklickt), wird die Unterstreichung auf 50 Prozent der Linkbreite erweitert, was dazu führt, dass sie sich horizontal erstreckt und den Text unterstreicht.*/
+} 
+
+.tab-contents ul li{
+    list-style: none; /* Mit dieser Anweisung wird die Standardlistenformatierung (Aufzählungszeichen oder Nummerierung) für die <li>-Elemente entfernt. Das bedeutet, dass die <li>-Elemente keine Aufzählungspunkte oder Nummern anzeigen werden. Dies ist nützlich, wenn Sie eine Liste ohne Aufzählungspunkte oder Nummern erstellen möchten.*/
+    margin: 10px 0; /*Diese Regel setzt den Außenabstand (Margin) für die <li>-Elemente. Der Wert "10px 0" definiert den Außenabstand für die oberen und unteren Seiten der <li>-Elemente und lässt den seitlichen (linken und rechten) Abstand unverändert (auf 0).  */
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 16px;
+}
+
+.tab-contents{
+    display: none; /*  Wenn display auf none gesetzt wird, werden die betroffenen Elemente auf der Webseite überhaupt nicht angezeigt.*/
+}
+
+.tab-contents.active-tab{
+    display: block; /* enn display auf block gesetzt wird, wird das betroffene Element im normalen Fluss des Dokuments angezeigt. Das bedeutet, es wird im Layout sichtbar und nimmt den verfügbaren Raum ein.*/
+}
+
+/* ---------------------------------- about --------------------------------*/
+
+#services{
+    padding: 30px 0; /* Dieser Wert definiert das obere und untere Padding (den Innenabstand) des Elements und setzt es auf 30 Pixel. Das bedeutet, dass zwischen dem Inhalt des Elements und seinen oberen und unteren Rändern jeweils 30 Pixel Innenabstand besteht.
+
+    0: Dieser Wert legt das linke und rechte Padding auf 0. Das heißt, es wird kein horizontaler Innenabstand hinzugefügt.*/
+}
+
+.services-list{
+    display:grid; /* Mit dieser Eigenschaft wird festgelegt, dass das Element, dem die Klasse "services-list" zugewiesen ist, als Raster-Container fungiert. Das bedeutet, dass die darin enthaltenen Elemente als Raster angeordnet werden, was die Möglichkeit bietet, Inhalte in einem Rastermuster anzuordnen.*/
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Diese Eigenschaft legt die Anzahl und die Größe der Spalten im Raster fest. Hier wird eine spezielle Technik namens "repeat" mit "auto-fit" und "minmax" verwendet:repeat(auto-fit, minmax(250px, 1fr)): Dieser Teil bedeutet, dass die Spalten so oft wiederholt werden, wie sie in den verfügbaren Platz passen (auto-fit), und dass jede Spalte eine minimale Breite von 250 Pixeln und eine maximale Breite von 1fr (einem Teilverhältnis des verfügbaren Raums) hat. Dies ermöglicht es den Spalten, sich je nach verfügbarem Platz flexibel anzupassen. Wenn mehr Platz vorhanden ist, werden mehr Spalten hinzugefügt, und wenn weniger Platz vorhanden ist, werden die Spalten schmaler, jedoch nicht kleiner als 250 Pixel. */
+    grid-gap: 40px; /* Mit dieser Eigenschaft wird der Abstand (Abstand) zwischen den Rasterelementen festgelegt. Hier wird ein Abstand von 40 Pixeln zwischen den Rasterzellen oder Elementen im Raster definiert.*/
+    margin-top: 50px; /* iese Regel legt einen Außenabstand (Margin) oberhalb des gesamten Rastercontainers fest. Das Element mit der Klasse "services-list" wird um 50 Pixel von oben verschoben, um Abstand zwischen diesem Element und seinen übergeordneten Elementen oder anderen Elementen zu schaffen.*/
+}
+
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.services-list div i h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px
+}
+
+.services-list div a{
+    text-decoration: none;
+    color:#fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.services-list div:hover{
+    background: #ff004f;
+    transform:translateY(-10px);
+}
+
+/* ---------------portfolio------------------*/
+
+#portfolio{
+    padding: 50px 0;
+}
+
+.work-list{
+    display:grid; /* Mit dieser Eigenschaft wird festgelegt, dass das Element, dem die Klasse "services-list" zugewiesen ist, als Raster-Container fungiert. Das bedeutet, dass die darin enthaltenen Elemente als Raster angeordnet werden, was die Möglichkeit bietet, Inhalte in einem Rastermuster anzuordnen.*/
+    grid-template-columns: repeat(3, 1fr); /* Fast: Diese Eigenschaft legt die Anzahl und die Größe der Spalten im Raster fest. Hier wird eine spezielle Technik namens "repeat" mit "auto-fit" und "minmax" verwendet:repeat(auto-fit, minmax(250px, 1fr)): Dieser Teil bedeutet, dass die Spalten so oft wiederholt werden, wie sie in den verfügbaren Platz passen (auto-fit), und dass jede Spalte eine minimale Breite von 250 Pixeln und eine maximale Breite von 1fr (einem Teilverhältnis des verfügbaren Raums) hat. Dies ermöglicht es den Spalten, sich je nach verfügbarem Platz flexibel anzupassen. Wenn mehr Platz vorhanden ist, werden mehr Spalten hinzugefügt, und wenn weniger Platz vorhanden ist, werden die Spalten schmaler, jedoch nicht kleiner als 250 Pixel. */
+    grid-gap: 40px; /* Mit dieser Eigenschaft wird der Abstand (Abstand) zwischen den Rasterelementen festgelegt. Hier wird ein Abstand von 40 Pixeln zwischen den Rasterzellen oder Elementen im Raster definiert.*/
+    margin-top: 50px; /* iese Regel legt einen Außenabstand (Margin) oberhalb des gesamten Rastercontainers fest. Das Element mit der Klasse "services-list" wird um 50 Pixel von oben verschoben, um Abstand zwischen diesem Element und seinen übergeordneten Elementen oder anderen Elementen zu schaffen.*/ 
+     /* Ab hier test */
+}
+
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+
+.work:nth-child(1),
+.work:nth-child(2),
+.work:nth-child(3){
+    display: block;
+}
+
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: 0.5s;
+}
+
+.layer{
+    width: 100%;
+    height: 0; /* if i hover over it it becomes 100%*/
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: 0.5s;
+}
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.layer a{
+    margin-top: 20px;
+    color:#ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+}
+
+.work:hover .layer{
+    height: 100%;
+}
+
+#see-more{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+    cursor: pointer;
+}
+
+#see-more:hover{
+    background: #ff004f;
+
+}
+
+/* -----------------------------contact------------------------------*/
+
+.contact-left{
+    flex-basis: 35%;
+}
+
+.contact-right{
+    flex-basis: 60%;
+}
+
+.contact-left p{
+    margin-top: 30px;
+}
+
+.contact-left p{
+    color:#ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+
+.social-icons{
+    margin-top: 30px;
+}
+
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+
+.social-icons a:hover{
+    color:#ff004f;
+    transform: translateY(-5px);
+}
+
+a.btn2 {
+    display: block; /* Display as block-level element */
+    background: #ff004f; /* Red background color */
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center; /* Center text within the block */
+    text-decoration: none; /* Remove default link underline */
+    color: #fff; /* Text color */
+    border-radius: 10px;
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+
+.contact-right form{
+    width: 100%;
+    margin-bottom: 50px;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+
+form .btn2{
+    display: block; /* Display as block-level element */
+    background: #ff004f; /* Red background color */
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    text-align: center; /* Center text within the block */
+    text-decoration: none; /* Remove default link underline */
+    color: #fff; /* Text color */
+    border-radius: 10px;
+}
+
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background: #262626;
+    font-weight: 300;
+}
+
+.copyright i{
+    color:#ff004f;
+    
+}
+
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
+
+/* ------------------------- css for samll screen---------------------*/
+
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 6000px){
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+    }
+
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: 0.5s;
+    }
+
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    /*
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, about-col-2{
+        flex-basis: 35%;
+    }
+
+    .about-col-1{
+        margin-top: 30px;
+    }
+
+    .about-col-2{
+        margin-top: 14px;
+    }
+
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    */
+    
+}

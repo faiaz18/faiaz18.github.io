@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/b738a6e88a.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+
+        <div id="header">
+            
+            <div class="container">
+                
+                <nav>
+                    <img src="images/Logo.png" class="logo">
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li> <!-- Das <a>-Tag erstellt einen Hyperlink zu einer anderen Seite-->
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>                       
+                        <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                    </ul>
+                    <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+                    
+                </nav>
+
+                <div class="header-text">
+                    <h2>Computer Science Student</h2>
+                    <h1>Hi, I'm <span>Faiaz</span><br>From Switzerland</h1>
+
+                </div>
+            
+            </div>
+
+        </div>
+
+<!-- ---------------------------------- about ------------------------------------------->
+        
+        <div id="about">
+            
+            <div class="container">
+
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="images/AboutMe.jpg">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <br>
+                        <p style="line-height: 1.8;">Passionate about Cyber Security and Software Development.
+                        Aspiring to build a career in one of these dynamic fields, 
+                        I thrive on tackling complex challenges and finding innovative 
+                        solutions. I love coding projects that explore the intersections 
+                        of these areas, constantly honing my skills and knowledge. Open to 
+                        opportunities that allow me to contribute to cutting-edge projects 
+                        and collaborate with like-minded professionals.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')" >Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Developement</span><br>Web Application Developement</li>
+                                <li><span>App Developement</span><br>iOS/Android App Developement</li>
+                                <li><span>Tutoring</span><br>Mathematics, Computer Science, Economics, German</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024 - today</span><br>Freelance App Developer</li>
+                                <li><span>2023 - today</span><br>Freelance Web Developer</li>
+                                <li><span>2021 - today</span><br>Tutor</li>    
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023 - 2026</span><br>Bsc Computer Science from ETH Zurich</li>
+                                <li><span>2019 - 2023</span><br> Swiss High School Diploma (Gymnasiale Maturität)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ------------------------------------ services -------------------------------------------------->
+
+        <div id="services">
+            <div class="container">
+                <h1 class="sub-title">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>Web Developement</h2>
+                        <p> <br>As a solo web developer, I bring your digital dreams to life with precision and creativity. 
+                            With a focus on crafting unique websites tailored to your vision, 
+                            I ensure that your online presence truly represents your brand. 
+                            From clean and responsive designs to efficient coding, I handle it all.
+                            Whether you're an entrepreneur, artist, or anyone in need of a website, 
+                            I provide one-on-one attention to bring your digital vision to reality.
+                            Your online success is my mission, and I'm here to help you leave a 
+                            lasting impression on the web.</p>                       
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store-ios"></i>
+                        <h2>App Developement</h2>
+                        <p> <br>As a dedicated solo app developer, I'm here to turn your app ideas into 
+                            reality. Whether you're an entrepreneur, a startup, or an individual 
+                            with a groundbreaking concept, I'm your go-to expert for creating 
+                            custom mobile applications. I specialize in building intuitive and 
+                            feature-rich apps that resonate with your target audience. With a keen 
+                            eye for design and robust coding skills, I'll bring your app vision to
+                            life. From concept to deployment, I'll work closely with you to ensure 
+                            your app is a perfect fit for your goals.</p>     
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <h2>Teaching Assistance</h2>
+                        <p> <br>With expertise in mathematics, computer science, economics, 
+                            and German language, I offer tailored teaching assistance to help 
+                            you excel in these subjects. As your dedicated teaching assistant, 
+                            I provide one-on-one support and guidance to enhance your 
+                            understanding and performance. Whether you're a student looking to 
+                            ace your exams, a professional seeking to bolster your skills, or 
+                            someone eager to master a new language, I've got you covered. I 
+                            offer comprehensive assistance, including explanations, practice 
+                            problems, and language coaching to make your learning journey 
+                            enjoyable and successful.</p> 
+                    </div>
+
+                </div>
+            </div>
+
+
+        <!----------------------------------------------- Portfolio -------------------------------------------------------------->
+
+        <div id="portfolio">
+            <div class="container">
+                <h1 class="sub-title">My Work</h1>
+                <div class="work-list">
+                    <div class="work">
+                        <img src="images/Roulette.png">
+                        <div class="layer">
+                            <h3>Quantitative Analysis of Roulette</h3>
+                            <p>The analysis comprises mathematical and statistical models that meticulously assess extensive datasets from roulette,
+                                enabling in-depth insights and predictions based on the data's patterns and trends.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/BlackJack.jpg">
+                        <div class="layer">
+                            <h3>Black Jack Web Application</h3>
+                            <p>I developed a website that offers an engaging platform for playing the classic card game of Blackjack, 
+                                providing an immersive and entertaining gaming experience.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Sudoku.png">
+                        <div class="layer">
+                            <h3>Sudoku Solver</h3>
+                            <p>I crafted an algorithm capable of solving any Sudoku puzzle and complemented 
+                                it with an intuitive user interface for a seamless and user-friendly Sudoku-solving experience.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/SocialMedia.jpg">
+                        <div class="layer">
+                            <h3>Social Media Clone</h3>
+                            <p>Created a social media clone that emulated the core features and functionalities of a 
+                                popular platform, allowing users to create profiles, share posts, and connect with friends.                                
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Sorting.jpeg">
+                        <div class="layer">
+                            <h3>Sorting Algorithm Visualizer</h3>
+                            <p>I designed a website that provides a visual demonstration of how a sorting algorithm operates, 
+                                offering an interactive and educational experience for understanding sorting processes.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                    <div class="work">
+                        <img src="images/Pathfinder.png">
+                        <div class="layer">
+                            <h3>Visualization of pathfinding algorithm</h3>
+                            <p>I designed a website that provides a visual demonstration of how a pathfinding algorithm operates, 
+                                offering an interactive and educational experience for understanding sorting processes.
+                            </p>
+                            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div id="see-more">See more</div>
+            </div>
+        </div>
+
+        <!-- --------------------------------------------- contact --------------------------------------------------------------->
+        
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-solid fa-paper-plane"></i>faiaz.islam@outlook.com</p>
+                        <p><i class="fa-solid fa-square-phone"></i>+41 76 334 77 75</p>
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/faiaz.18/"><i class="fa-brands fa-square-instagram"></i></i></a>
+                            <a href="https://www.linkedin.com/in/faiaz-islam/"><i class="fa-brands fa-linkedin"></i></i></a>
+                            <a href="https://github.com/faiaz18"><i class="fa-brands fa-square-github"></i></i></a>
+                        </div>
+                        <a href="images/test.pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form name="submit-to-google-sheet">
+                            <input type="text" name="Name" placeholder="Your Name" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">Submit</button>
+                        </form>
+                        <span id="msg"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Copyright © Faiaz. Made with <i class="fa-solid fa-heart"></i> by Faiaz Islam</p>
+            </div>
+        </div>        
+        
+        <!----------------------------------------------- JS Part -------------------------------------------------------------->
+        
+        <script>
+
+            let seeMoreBtn = document.querySelector('#see-more');
+            let currentItem = 3;
+
+            seeMoreBtn.onclick = () => {
+                let boxes = [...document.querySelectorAll('.container .work-list .work')];
+                for (var i = currentItem; i < currentItem + 3; i++) {
+                    if (i < boxes.length) {
+                        boxes[i].style.display = 'inline-block';
+                    }
+                }   
+                currentItem += 3;
+
+                if (currentItem >= boxes.length) {
+                    seeMoreBtn.style.display = 'none';
+                }
+            }
+
+
+
+        </script>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbw_219PjlaUab3NXm06kutlBo-5dWAdoyn64MPygr0fha5cFtVsRjIMi_raFfa-Aj97Vg/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully!"
+                    setTimeout(function(){
+                        msg.innerHTML = " "
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+        
+        <script> 
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+
+        </script>
+
+        <script>
+            
+            var sidemenu = document.getElementById("sidemenu");
+
+            function openmenu(){
+                sidemenu.style.right = "0";
+            }
+
+            function closemenu(){
+                sidemenu.style.right = "-200px";
+            }
+
+
+        </script>
+
+        
+        
+    </body>
+
+</html>
